@@ -1,0 +1,217 @@
+/* Full Page Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #f4f5f7;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #2563eb;
+  box-shadow: 0 2px 15px rgba(37, 99, 235, 0.2);
+}
+
+/* Add Text Footer */
+.add-text-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  margin-left: 20rem;
+  background-color: #fff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  transition: padding 0.3s ease; /* Padding animation */
+}
+
+/* Input Container */
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  gap: 10px;
+}
+
+/* Text Input */
+.add-text-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.add-text-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.1);
+}
+
+/* Recording Button */
+.record-btn {
+  background-color: rgb(104, 44, 44);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.record-btn:hover {
+  background-color: rgb(81, 33, 33);
+  transform: scale(1.05);
+}
+
+/* Image Upload Section */
+.image-upload {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.image-upload-label {
+  font-size: 30px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.image-upload-label:hover {
+  color: #2563eb;
+}
+
+.image-upload-input {
+  display: none;
+}
+
+.preview-image {
+  max-width: 100px;
+  max-height: 100px;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Note Cards (New Component) */
+.note-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.3s ease;
+  transition: padding 0.3s ease; /* Padding animation */
+}
+
+.note-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.note-card .card-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.note-card .card-content {
+  font-size: 14px;
+  color: #555;
+}
+
+.note-card .note-date {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.note-card .expand-btn {
+  font-size: 14px;
+  color: #2563eb;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.note-card .expand-btn:hover {
+  color: #1d4ed8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-bar {
+    width: 90%;
+  }
+
+  .add-text-input {
+    width: 100%;
+  }
+
+  .add-text-footer {
+    padding: 10px;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 5px;
+    width: 90%;
+  }
+
+  .record-btn {
+    width: 100%;
+  }
+
+  .image-upload {
+    width: 100%;
+  }
+
+  /* Adjust Note Card Styling */
+  .note-card {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .note-card .card-header {
+    font-size: 16px;
+  }
+
+  .note-card .card-content {
+    font-size: 12px;
+  }
+}
